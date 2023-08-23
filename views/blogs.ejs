@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+
+  <body>
+    <div class="title">
+      <h1>Create a <span>blog</span></h1>
+    </div>
+    <form action="/blogs/create" method="POST">
+      <div>
+        <div>
+          <label for="title">Title</label>
+          <input type="text" name="title" id="title" required />
+        </div>
+        <div>
+          <label for="snippet">Snippet</label>
+          <input type="text" name="snippet" id="snippet" required />
+        </div>
+        <div>
+          <label for="body">Body</label>
+          <textarea
+            name="body"
+            id="body"
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="submit">SUBMIT</button>
+      </div>
+    </form>
+  </body>
+</html>
